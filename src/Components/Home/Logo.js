@@ -1,15 +1,27 @@
-import Side from "./Side";
+import { Link } from "react-router-dom"
 
-function Logo({name}) {
+function Logo() {
     return (
         <div className="container">
-            <div className="logo">
-            <h1 style={{fontWeight: 'lighter', letterSpacing: '2px'}}>{name}</h1>
-            <p style={{fontSize: '12px', fontWeight: 'medium', textAlign: 'center', marginTop: '5px', fontFamily: 'Helvetica'}}>MENS WEAR EXPERT | GHANA</p>
-            </div>
-            <Side />
+            <Link to='/' style={styles.link}>
+                <div style={styles.logo}>
+                    <h1 style={{fontWeight: 'bold'}}>SUITS APPAREL</h1>
+                    <p style={{fontSize: '12px', fontWeight: 'medium', textAlign: 'center', marginTop: '5px'}}>MENS WEAR EXPERT | GHANA</p>
+                </div>
+            </Link>
         </div>
-    )
+    );
 }
 
 export default Logo;
+
+const styles = {
+    logo: {
+        cursor: "pointer"
+    },
+
+    link: {
+        textDecoration: "none",
+        color: "#000"
+    }
+}

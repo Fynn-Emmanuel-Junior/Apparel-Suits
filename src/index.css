@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+
 .topbackground {
     width: 100%;
     height: 50px;
     background-color: #000;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    background-color: #fff;
     font-family: 'Poppins';
 }
 
 .header {
     width: 100%;
     height: 200px;
+ 
 }
 
 .container {
@@ -47,20 +57,54 @@ body {
     cursor: pointer;
 }
 
+.navbarlist li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbarlist li {
+    position: relative;
+}
+
+
+.navbarlist>li>a::before{ 
+    content: '';
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbarlist>li>a:hover::before{
+    width: 100%;
+    visibility: visible;  
+}
+
+
 input{ 
-
     font-size: 15px;
+
 }
 
-input:focus {
-    border:"none", 
+.focus {
+
+    outline: 0.5px solid #000;
 }
 
+.input:focus {
+    border: none;
+    outline: 1px solid #88898b ;
+    
+}
 input::placeholder{
     font-family: 'Poppins';
     font-size: 15px;
     margin-left: 100px;
 }
+
 
 
 .button{
@@ -73,34 +117,139 @@ input::placeholder{
     transition: all 0.2s linear;
     cursor: pointer;
     border: none;
-    z-index: 1;
+    outline: 0.5px solid #000;
+    position: inherit;
+
 }
 
 .button::before{
-    content: ' ';
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
+    width: 0;
+    height:100%;
     background-color: #fff;
-    z-index: -1;
-    transition: transform 300ms ease-in-out;
-    transform: scaleX(0);
-    transform-origin: left;
+    transition: all 0.5s ease ;
 }
 
-.button:hover::before,
-.button:focus::before
-{
-    transform: scaleX(1);
+.button:hover::before{
+    width: 100%;
+    background-color: transparent;
+  
 
 }
 
-.button:hover,
-.button:focus{ 
-    
-    background-color: #fff;
+.button:hover{
+    background-color: transparent;
     color: #000;
-    border: 0.5px solid #000
+}
+
+.footerButton {
+    width: 100%;
+    padding: 10%;
+    background-color: transparent;
+    color: #fff;
+    letter-spacing: 3px; 
+    font-weight: 200px;
+    background-color: #474747;
+}
+
+.footerButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.5s ease;
+    background-color: #000;
+}
+
+.footerButton:hover::before {
+    width: 100%;
+    background-color: transparent;
+
+}
+
+.footerButton:hover {
+    background-color: rgb(39, 39, 39);
+    color: #000;
+}
+
+.homeButton {
+    width: 100%;
+    padding: 10%;
+    color: #000;
+    letter-spacing: 3px; 
+    font-weight: 200px;
+    background-color: #fdfdfe;
+    border: none;
+
+}
+
+.sectionContainer {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
+
+}
+
+.section-image {
+   width: 100%;
+   height: 100%;
+   position: relative;
+
+}
+
+.image1 {
+    background: url("./Components/assets/homePage/image1.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.image2 {
+    background: url("./Components/assets/homePage/image2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.image3 {
+    background: url("./Components/assets/homePage/image3.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.image4 {
+    background: url("./Components/assets/homePage/image4.jpg") no-repeat center;
+    background-size: cover;
+   
+}
+
+.image5 {
+    background: url("./Components/assets/homePage/image5.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.image6 {
+    background: url("./Components/assets/homePage/image6.jpg") no-repeat center ;
+    background-size: cover;
+}
+
+.imageButton {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.input::placeholder {
+    color: #fff;
+}
+
+input {
+    color: #fff;
 }
