@@ -1,6 +1,6 @@
-import Logo  from "./Logo";
-import Navigationbar from "./Navigationbar";
-import Side from "./Side";
+import Logo  from "../../Components/Logo";
+import Navigationbar from "../../Components/Navigationbar";
+import Side from "../../Components/Side";
 import "@fontsource/poppins";
 
 function Header() {
