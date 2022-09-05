@@ -1,19 +1,24 @@
 import React from 'react';
 import Header from '../../Components/Header';
-import image from '../../assets/Suits/suit1.webp'
+import Products from '../../Constants/SuitImages';
 import { Link } from 'react-router-dom';
 
 
-function SuitItem() {
+function SuitItem({productid}) {
+    const item = Products.filter((product) => product.id === productid)
+    console.log(item)
+    console.log(item.id)
     return (
         <div>
             <Header />
             <div>
                 <div>
-                    <img src={image} alt=""/>
+                    <img src={item[0].Image} alt=""/>
                 </div>
                 <div>
-
+                    <div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
