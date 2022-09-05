@@ -214,6 +214,9 @@ export const styles = {
 
     list: {
         paddingBottom: "10%"
-    }
+    }, 
 
+    // Suits Page Css Styling
+
+   
 }

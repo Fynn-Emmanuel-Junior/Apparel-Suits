@@ -1,12 +1,11 @@
-import Logo  from "../../Components/Logo";
-import Navigationbar from "../../Components/Navigationbar";
-import Side from "../../Components/Side";
+import Logo  from "./Logo";
+import Side from "./Side";
 import "@fontsource/poppins";
 
-function Header() {
+function HeaderNav() {
     return (
        <div style={styles.Main}>
-            <header className="header">
+            <header className="header" style={{height: "150px"}}>
                 <div style={styles.headingContainer}>
                     <div style={styles.heading}>
                         <p>Limited Time Only, Seasonal Clearance Sale</p>
@@ -21,16 +20,13 @@ function Header() {
                           <Side />
                         </div>
                     </div>
-                    <div style={{marginTop: "30px", borderBottom: "1px solid #cccdcf", paddingBottom: "15px"}}>
-                        <Navigationbar />
-                    </div>
                 </div>
             </header>
        </div> 
     )
 }
 
-export default Header;
+export default HeaderNav;
 
 const styles = {
     Main: {
