@@ -1,6 +1,7 @@
 import React from 'react';
 import Products from '../../Constants/SuitImages';
 import HeaderNav from '../../Components/HeaderNav';
+import Footer from '../../Components/Footer';
 import { Link } from  'react-router-dom';
 
 
@@ -37,11 +38,11 @@ function SuitPage({setProductid}) {
                                             <img style={{width: "100%", height: "100%"}} key={product.id}  src={product.Image} alt=""/>
                                         </div>
                                         <div>
-                                            <div style={{width: "80%", margin: "auto", textAlign: "center"}}>
+                                            <div style={{width: "80%", margin: "auto", textAlign: "center",fontSize: "12px"}}>
                                                 {product.title}
                                             </div>
                                             <div style={{textAlign: "center", color: "#277bc0", marginBottom: "10px"}}>
-                                                {product.price} {<del>{product.price1}</del>}
+                                                {product.price}  {<del>{product.price1}</del>}
                                             </div>
                                         </div>
                                     </div>
@@ -52,6 +53,23 @@ function SuitPage({setProductid}) {
                     }
                 </div>
             </div>
+            <div style={{width: "100%", marginTop: "10%"}}>
+                <div style={{width: "40%", margin: "auto"}}>
+                    <div style={{textAlign: "center"}}>
+                        Men's Suits
+                    </div>
+                    <div style={{textAlign: "center", marginTop: "5%"}}>
+                         Different styles men's suits at Suits Apparel. Free shipping on qualified orders. We have a whole collection of different suit styles, including our featured executive suit, sharkskin suit, double-breasted suit, Chinese collar suit or Nehru suit, windowpane men's suit, banker stripe men's suit and so on. Whether you are looking for big men's clothing, tall men's clothing, clothes for short men or suits for short men, you'll find it here
+                    </div>
+                    <div style={{textAlign: "center", marginTop: "5%"}}>
+                        Suits Apparel is a one-stop suit outlet for menswear online. Not only because of the wide selection of quality suits for sale online, but also because of the discounted-priced suits for men. Before shopping, we highly recommend referencing to the suit size estimate. From men's size 36 to size 72. Suits come in short size suit, long size suit and regular size suit. We also have a special collection for big and tall men's sizes. It is convenient for our valued customers to find exactly what they are looking for at Suits Outlets Menswear
+                    </div>
+                </div>
+            </div>
+            <div>
+                <Footer />
+            </div>
+           
             
         </div>
     );
