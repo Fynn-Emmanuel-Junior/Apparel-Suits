@@ -1,9 +1,13 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
+import Header from '../../Components/Header';
 
 function Signup() {
     return (
      <div>
+        <div>
+            <Header />
+        </div>
         <div style={styles.main}>
             <div style={styles.container}>
                 <div>

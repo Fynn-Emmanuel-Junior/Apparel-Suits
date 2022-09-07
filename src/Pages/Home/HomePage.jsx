@@ -153,17 +153,17 @@ function HomePage() {
                             </div>
                             <div style={{marginBottom: "5%"}}>
                                 <p>
-                                    Suits Outlets®, founded in New York, USA, is a leading men's fashion platform offering men's suits, shirts, shoes and accessories with true craftsmanship. Throughout the years, the company has been helping gentlemen like you find the perfect look. We offer discount suits on sale at a price range $100 - $200. With our free shipping and 30-Day return policy, customers will have a fantastic experience shopping all kinds of menswear.
+                                    Suits Apparel®, founded in Accra, GHANA, is a leading men's fashion platform offering men's suits, shirts, shoes and accessories with true craftsmanship. Throughout the years, the company has been helping gentlemen like you find the perfect look. We offer discount suits on sale at a price range $100 - $200. With our free shipping and 30-Day return policy, customers will have a fantastic experience shopping all kinds of menswear.
                                 </p>
                             </div>
                             <div style={{marginBottom: "5%"}}>
                                 <p>
-                                    Suits Outlets has a full line of  men's affordable dress wear – including suits, tuxedos, dress shirts, shoes, hats and accessories – at your ideal quality and price. Our fashion selection includes 3-Piece, 2-Piece, Regular Fit, Slim Fit, Glen Plaid, Sharkskin, Double Breasted, Pinstripe, Wool, Nehru, French Cuff or Mandarin Collar, and more stylish menswear. With our expert stylists' help, customers can easily find Big and Tall suits or boy suits as well. We provide fashion advices on different occasions including but not limited to wedding, church, cruise, everyday wear, classic style/1940 style, and complete dress suit
+                                    Suits Apparel has a full line of  men's affordable dress wear – including suits, tuxedos, dress shirts, shoes, hats and accessories – at your ideal quality and price. Our fashion selection includes 3-Piece, 2-Piece, Regular Fit, Slim Fit, Glen Plaid, Sharkskin, Double Breasted, Pinstripe, Wool, Nehru, French Cuff or Mandarin Collar, and more stylish menswear. With our expert stylists' help, customers can easily find Big and Tall suits or boy suits as well. We provide fashion advices on different occasions including but not limited to wedding, church, cruise, everyday wear, classic style/1940 style, and complete dress suit
                                 </p>
                             </div>
                             <div>
                                 <p>
-                                    This is Suits Outlets New York, a complete men's fashion solution and a warm family. If you are looking for comfortable, durable and affordable menswear, you are in the right place. Shop smart and save more.
+                                    This is Suits Apparel Accra, a complete men's fashion solution and a warm family. If you are looking for comfortable, durable and affordable menswear, you are in the right place. Shop smart and save more.
                                 </p>
                             </div>
 

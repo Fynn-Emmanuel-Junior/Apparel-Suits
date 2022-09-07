@@ -1,11 +1,14 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
-import {styles} from '../../Constants/Constants';
+import Header from '../../Components/Header';
 import { Link } from 'react-router-dom';
 
 function Signin() {
     return (
         <div>
+            <div>
+                <Header />
+            </div>
             <div style={styles.main}>
                 <div style={styles.container}>
                     <div>
@@ -58,4 +61,48 @@ function Signin() {
 }
 
 export default Signin;
+
+const styles = {
+    main: {
+        width: "60%",
+        textAlign: "center",
+        margin: "auto",
+        marginTop: "5%"
+
+    },
+
+    container: {
+        width: "100%",
+        
+    },
+    
+    heading: {
+        marginBottom: "20px",
+        fontWeight: "normal"
+    },
+
+    form: {
+        marginTop: "20px"
+    },
+
+    formDiv: {
+        width: "50%",
+        margin: "auto",
+        marginBottom: "20px", 
+        outline: "0.5px solid #cccdcf"
+    },
+
+    input: {
+        width: "100%",
+        padding: "15px",
+        border: "none"
+       
+    },
+
+    link: {
+        textDecoration: "none",
+        color: "#000"
+    }
+  
+}
 

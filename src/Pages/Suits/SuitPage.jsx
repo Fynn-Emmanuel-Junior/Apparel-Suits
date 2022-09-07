@@ -31,6 +31,7 @@ function SuitPage({setProductid}) {
                             return (
                                 <Link to='/suitItem' style={Styles.link} key={product.id} onClick={() => {
                                     setProductid(product.id)
+                                    console.log(product)
                                
                                 }}>
                                     <div style={{width: "100%", border: "0.5px solid #eeeeee", cursor: "pointer"}}>
