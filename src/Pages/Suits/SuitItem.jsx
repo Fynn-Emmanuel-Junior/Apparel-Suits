@@ -7,10 +7,15 @@ import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 
 
-function SuitItem({productid}) {
+function SuitItem({productid,setProduct}) {
     const item = Products.filter((product) => product.id === productid)
 
     const [selected, setSelected] = useState("")
+
+    const handleClick = () => {
+        setProduct(item[0])
+        console.log("hello")
+    }
     
     
     return (
@@ -37,7 +42,10 @@ function SuitItem({productid}) {
                                 <Counter />
                             </div>
                             <div style={{width: "40%", marginBottom: "20px", position: "relative"}}>
-                                <button className='button'>ADD TO CART</button>
+                             <Link to='/checkout' className='button' style={{textDecoration: "none"}} onClick={handleClick}>
+                                ADD TO CART
+                                
+                             </Link>   
                             </div>
                         </div>
                         <div style={{marginTop: "15%"}}>
