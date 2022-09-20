@@ -12,15 +12,13 @@ import Header from '../../Components/Header';
 
 function HomePage() {
 
-    const tower = "tower"
-
     return (
         <div>
             <Header />
             <div style={styles.Main}>
                 <div style={styles.imageContainer}>
                     <div style={styles.image}>
-                        <img src={image1} alt={"image"} style={{width: "100%", height: "100%"}}/>
+                        <img src={image1} alt={"image1"} style={{width: "100%", height: "100%"}}/>
                     </div>
                 </div>
                 <div>

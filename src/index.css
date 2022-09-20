@@ -186,6 +186,7 @@ input::placeholder{
     font-weight: 200px;
     background-color: #fdfdfe;
     border: none;
+    cursor: pointer;
 
 }
 

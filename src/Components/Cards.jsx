@@ -15,7 +15,9 @@ function Cards() {
                           <div style={styles.imageButton}>
                               <p style={{marginBottom: "10%",fontSize: "25px"}}>DOUBLE BREASTED</p>
                               <div style={{width: "80%", backgroundColor: "#fff", position: "relative"}}>
-                                    <Link to={'/suits'} className='homeButton'>VIEW PRODUCTS</Link>
+                                 <Link to={'/suits'}>
+                                    <button className='homeButton'>VIEW PRODUCTS</button>
+                                 </Link>   
                               </div>
                           </div> 
                         </div>  
@@ -28,7 +30,9 @@ function Cards() {
                           <div  style={styles.imageButton}>
                               <p style={{marginBottom: "10%",fontSize: "25px"}}>WOOL</p>
                               <div className='imageButton' style={{width: "80%", backgroundColor: "#fff", position: "relative"}}>
+                                <Link to={'/suits'}>
                                     <button className='homeButton'>VIEW PRODUCTS</button>
+                                </Link>
                               </div>
                           </div> 
                         </div>  
@@ -41,7 +45,9 @@ function Cards() {
                           <div style={styles.imageButton}> 
                               <p style={{marginBottom: "10%",fontSize: "25px"}}>PINSTRIPE</p>
                               <div style={{width: "80%", backgroundColor: "#fff", position: "relative"}}>
+                                <Link to={'/suits'}>
                                     <button className='homeButton'>VIEW PRODUCTS</button>
+                                </Link>
                               </div>
                           </div> 
                         </div>  
@@ -54,7 +60,9 @@ function Cards() {
                           <div style={styles.imageButton}>
                               <p style={{marginBottom: "10%",fontSize: "25px"}}>GLEIN PAID</p>
                               <div style={{width: "80%", backgroundColor: "#fff", position: "relative"}}>
+                                <Link to={'/suits'}>
                                     <button className='homeButton'>VIEW PRODUCTS</button>
+                                </Link>
                               </div>
                           </div> 
                         </div>  
@@ -67,7 +75,10 @@ function Cards() {
                           <div style={styles.imageButton}>
                               <p style={{marginBottom: "5%",fontSize: "25px"}}>WEEDING</p>
                               <div style={{width: "80%", backgroundColor: "#fff", position: "relative"}}>
+                                <Link to={'/suits'}>
                                     <button className='homeButton'>VIEW PRODUCTS</button>
+                                </Link>
+                                    
                               </div>
                           </div> 
                         </div>  
@@ -80,7 +91,9 @@ function Cards() {
                           <div style={styles.imageButton}>
                               <p style={{marginBottom: "5%",fontSize: "25px"}}>SHARKSKIN</p>
                               <div style={{width: "80%", backgroundColor: "#fff", position: "relative"}}>
+                                <Link to={'/suits'}>
                                     <button className='homeButton'>VIEW PRODUCTS</button>
+                                </Link>  
                               </div>
                           </div> 
                         </div>  
