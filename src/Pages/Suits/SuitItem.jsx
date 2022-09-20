@@ -1,22 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Header from '../../Components/Header';
 import Dropdown from '../../Components/Dropdown';
 import Products from '../../Constants/SuitImages';
 import Counter from '../../Components/Counter';
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
+import { BarLoader } from 'react-spinners';
 
 
-function SuitItem({productid,setProduct}) {
+const SuitItem = ({productid,setProduct,setQuantity,setSize}) => {
     const item = Products.filter((product) => product.id === productid)
 
-    const [selected, setSelected] = useState("")
+    const [selected, setSelected] = useState("");
 
+    const [loading,setLoading] = useState(false);
+    
+
+    // const [totalproducts,setTotalProducts] = useState({});
+    
     const handleClick = () => {
         setProduct(item[0])
         
     }
-    
+
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false)
+        },5000)
+    },[])
+
     
     return (
         <div>
@@ -24,7 +37,17 @@ function SuitItem({productid,setProduct}) {
             <div>
                 <div style={{width: "80%", marginLeft: "20%",display: "flex",justifyContent: "space-between", marginTop: "5%"}}>
                     <div>
-                        <img src={item[0].Image} alt=""/>
+                        {
+                            loading ? 
+                            <div style={{marginTop: "120%",marginLeft: "100%"}}>
+                                <BarLoader  />
+
+                            </div>
+                            : 
+                            <div>
+                                <img key={item[0].id} src={item[0].Image} alt={"product"}/>
+                            </div>
+                        }
                     </div>
                     <div style={{width: "60%"}}>
                         <div style={{width: "100%"}}>
@@ -36,15 +59,15 @@ function SuitItem({productid,setProduct}) {
                                 <div><del>{item[0].price1}</del></div>
                             </div>
                             <div style={{margin: "10px 0"}}>
-                                <Dropdown selected={selected} setSelected={setSelected}/>
+                                <Dropdown selected={selected} setSelected={setSelected}  setQuantity={setQuantity} />
+                               
                             </div>
                             <div style={{marginBottom: "3%"}}>
-                                <Counter />
+                                <Counter setSize={setSize} />
                             </div>
                             <div style={{width: "40%", marginBottom: "20px", position: "relative"}}>
                              <Link to='/checkout' className='button' style={{textDecoration: "none"}} onClick={handleClick}>
                                 ADD TO CART
-                                
                              </Link>   
                             </div>
                         </div>

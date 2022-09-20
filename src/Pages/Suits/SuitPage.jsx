@@ -5,8 +5,9 @@ import Footer from '../../Components/Footer';
 import { Link } from  'react-router-dom';
 
 
-function SuitPage({setProductid,setProduct}) {
-    
+const SuitPage = ({setProductid}) => {
+
+
     return (
         <div>
             <HeaderNav />

@@ -2,7 +2,7 @@ import React from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import {useState} from 'react'
 
-function Dropdown({selected, setSelected}) {
+function Dropdown({selected, setSelected,setQuantity}) {
 
     const [isActive, setisActive] = useState(false);
     const options = ['Small','Medium','Large'];
@@ -23,6 +23,7 @@ function Dropdown({selected, setSelected}) {
                             <div className='dropdown-item' onClick={e =>{ 
                                 setSelected(option)
                                 setisActive(false)
+                                setQuantity(option);
                             }}>{option}</div>
 
                         ))

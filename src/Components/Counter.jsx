@@ -1,22 +1,40 @@
 import React from 'react';
 import { useState } from 'react'
 
-function Counter(props) {
+function Counter({setSize}) {
 
     const [increment,setIncrement] = useState(1);
     
+
+    if(increment === 1) {
+        setSize(increment);
+    } else {
+        setSize(increment);
+    }
+
     const Add = () => {
         setIncrement(increment + 1);
+        const size = increment + 1;
+        setSize(size);
+        
     }
 
     const Substract = () => {
         if(increment === 1) {
             setIncrement(increment)
+            const size = increment;
+            setSize(size)
         } else {
             setIncrement(increment-1)
+            const size = increment;
+            setSize(size)
         }
        
     }
+    
+
+    
+    
 
     return (
         <div>
