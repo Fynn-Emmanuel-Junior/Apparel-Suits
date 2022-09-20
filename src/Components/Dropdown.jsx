@@ -5,7 +5,7 @@ import {useState} from 'react'
 function Dropdown({selected, setSelected}) {
 
     const [isActive, setisActive] = useState(false);
-    const options = ['Small','Medium','Large']
+    const options = ['Small','Medium','Large'];
 
     return (
         <div className='dropdown'>

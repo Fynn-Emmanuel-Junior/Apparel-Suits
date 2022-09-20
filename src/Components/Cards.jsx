@@ -1,5 +1,6 @@
 import React from 'react';
 import { styles } from '../Constants/Constants';
+import { Link } from 'react-router-dom';
 
 function Cards() {
     return (
@@ -14,7 +15,7 @@ function Cards() {
                           <div style={styles.imageButton}>
                               <p style={{marginBottom: "10%",fontSize: "25px"}}>DOUBLE BREASTED</p>
                               <div style={{width: "80%", backgroundColor: "#fff", position: "relative"}}>
-                                    <button className='homeButton'>VIEW PRODUCTS</button>
+                                    <Link to={'/suits'} className='homeButton'>VIEW PRODUCTS</Link>
                               </div>
                           </div> 
                         </div>  

@@ -9,8 +9,7 @@ function Checkout({product}) {
             <div>
                 <img src={product.image} alt={'Product'} />
             </div>
-         
-            
+           <Footer />
         </div>
     );
 }

@@ -20,7 +20,7 @@ function HomePage() {
             <div style={styles.Main}>
                 <div style={styles.imageContainer}>
                     <div style={styles.image}>
-                        <img src={image1} alt={image} style={{width: "100%", height: "100%"}}/>
+                        <img src={image1} alt={"image"} style={{width: "100%", height: "100%"}}/>
                     </div>
                 </div>
                 <div>
@@ -140,7 +140,7 @@ function HomePage() {
                 <div style={{marginTop: "30%"}}>
                     <div style={{display: "flex"}}>
                             <div style={{width: "50%", marginTop: "7%"}}>
-                                <img width='70%' src={Tower} alt={tower} />
+                                <img width='70%' src={Tower} alt={"tower"} />
                             </div>
                         <div style={{width: "50%"}}>
                             <div>

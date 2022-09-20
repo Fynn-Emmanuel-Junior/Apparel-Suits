@@ -14,7 +14,7 @@ function SuitItem({productid,setProduct}) {
 
     const handleClick = () => {
         setProduct(item[0])
-        console.log("hello")
+        
     }
     
     
