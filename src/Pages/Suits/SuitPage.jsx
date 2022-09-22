@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Products from '../../Constants/SuitImages';
 import HeaderNav from '../../Components/HeaderNav';
 import Footer from '../../Components/Footer';
@@ -6,6 +6,8 @@ import { Link } from  'react-router-dom';
 
 
 const SuitPage = ({setProductid}) => {
+
+    
 
 
     return (
