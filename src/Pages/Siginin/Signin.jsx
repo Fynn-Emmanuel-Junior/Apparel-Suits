@@ -95,7 +95,8 @@ const styles = {
     input: {
         width: "100%",
         padding: "15px",
-        border: "none"
+        border: "none",
+        color: "#000000"
        
     },
 

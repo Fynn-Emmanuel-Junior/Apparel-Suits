@@ -8,26 +8,24 @@ import { Link } from 'react-router-dom';
 import { BarLoader } from 'react-spinners';
 
 
-const SuitItem = ({productid,setProduct,setQuantity,setSize}) => {
-    const item = Products.filter((product) => product.id === productid)
-
+const SuitItem = ({productid,setProduct,setProducts,setQuantity,setSize}) => {
+    
+    const product = Products.filter((product) => product.id === productid);
     const [selected, setSelected] = useState("");
-
     const [loading,setLoading] = useState(false);
-    
 
-    // const [totalproducts,setTotalProducts] = useState({});
-    
     const handleClick = () => {
-        setProduct(item[0])
+        setProduct(product);
+        setProducts(product);
         
     }
-
+    
     useEffect(() => {
+        
         setLoading(true);
         setTimeout(() => {
             setLoading(false)
-        },5000)
+        },3000)
     },[])
 
     
@@ -45,22 +43,25 @@ const SuitItem = ({productid,setProduct,setQuantity,setSize}) => {
                             </div>
                             : 
                             <div>
-                                <img key={item[0].id} src={item[0].Image} alt={"product"}/>
+                                <img key={product[0].id} src={product[0].Image} alt={"product"}/>
                             </div>
                         }
                     </div>
                     <div style={{width: "60%"}}>
                         <div style={{width: "100%"}}>
                             <div style={{width: "70%"}}>
-                                <p style={{fontSize: "22px"}}>{item[0].title}</p>
+                                <p style={{fontSize: "22px"}}>{product[0].title}</p>
                             </div>
                             <div style={{display: "flex", justifyContent: "space-between", width: "20%", fontSize: "20px", marginTop: "1%"}}>
-                                <div style={{color: "red"}}>{item[0].price}</div>
-                                <div><del>{item[0].price1}</del></div>
+                                <div style={{color: "red"}}>{product[0].price}</div>
+                                <div><del>{product[0].price1}</del></div>
                             </div>
                             <div style={{margin: "10px 0"}}>
                                 <Dropdown selected={selected} setSelected={setSelected}  setQuantity={setQuantity} />
                                
+                            </div>
+                            <div style={{margin: "10px 0"}}>
+                                {/* <Colors selected={selected} setSelected={setSelected} /> */}
                             </div>
                             <div style={{marginBottom: "3%"}}>
                                 <Counter setSize={setSize} />

@@ -1,6 +1,6 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Products from '../../Constants/SuitImages';
-import HeaderNav from '../../Components/HeaderNav';
+import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import { Link } from  'react-router-dom';
 import { BarLoader } from 'react-spinners';
@@ -13,15 +13,14 @@ const SuitPage = ({setProductid}) => {
     useEffect(() => {
         setLoading(true);
         setTimeout(() => {
-            setLoading(false);
-        },6000)
+            setLoading(false)
+        },1000)
     },[])
-    
 
 
     return (
         <div>
-            <HeaderNav />
+            <Header />
             <div style={{display: "flex", width:"100%", marginTop: "2%"}}>
                 <div style={{backgroundColor: "#F5F6F7", width: "15%", height: "400px", marginRight: "4%", marginLeft: "4%" , borderRadius: "5px"}}>
                         <div style={{width: "100%", margin: "auto",paddingTop: "10%"}}>
@@ -38,6 +37,7 @@ const SuitPage = ({setProductid}) => {
                         </div>
                 </div>
                 <div className='Grid'>
+                   
                     {
                         Products.map((product) => {
                             return (
@@ -45,28 +45,29 @@ const SuitPage = ({setProductid}) => {
                                     setProductid(product.id)
                                    
                                 }}>
-                                    <div>
-                                        {
-                                            loading ? 
-                                                <div style={{marginTop: "120%",marginLeft: "70%"}}>
-                                                    <BarLoader />
-                                                </div>
-                                                :
+                                     <div>
+                                     {
+                                        loading ? 
+                                        <div style={{marginTop: "120%",marginLeft: "70%"}}>
+                                            <BarLoader  />
 
-                                            <div style={{width: "100%", border: "0.5px solid #eeeeee", cursor: "pointer"}}>
-                                                <div style={{width: "180px", margin: "auto"}}>
-                                                    <img style={{width: "100%", height: "100%"}} key={product.id}  src={product.Image} alt=""/>
+                                        </div>
+                                        : 
+                                        
+                                        <div style={{width: "100%", border: "0.5px solid #eeeeee", cursor: "pointer"}}>
+                                            <div style={{width: "180px", margin: "auto"}}>
+                                                <img style={{width: "100%", height: "100%"}} key={product.id}  src={product.Image} alt=""/>
+                                            </div>
+                                            <div>
+                                                <div style={{width: "80%", margin: "auto", textAlign: "center",fontSize: "12px"}}>
+                                                    {product.title}
                                                 </div>
-                                                <div>
-                                                    <div style={{width: "80%", margin: "auto", textAlign: "center",fontSize: "12px"}}>
-                                                        {product.title}
-                                                    </div>
-                                                    <div style={{textAlign: "center", color: "#277bc0", marginBottom: "10px"}}>
-                                                        {product.price}  {<del>{product.price1}</del>}
-                                                    </div>
+                                                <div style={{textAlign: "center", color: "#277bc0", marginBottom: "10px"}}>
+                                                    {product.price}  {<del>{product.price1}</del>}
                                                 </div>
                                             </div>
-                                        }
+                                        </div>
+                                    }
                                     </div>
                                 
                                 </Link>

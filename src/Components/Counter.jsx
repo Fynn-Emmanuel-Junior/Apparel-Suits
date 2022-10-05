@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react'
 
-function Counter({setSize}) {
+const Counter = ({setSize}) => {
 
     const [increment,setIncrement] = useState(1);
     
@@ -31,9 +31,6 @@ function Counter({setSize}) {
         }
        
     }
-    
-
-    
     
 
     return (

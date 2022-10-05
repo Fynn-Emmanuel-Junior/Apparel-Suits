@@ -24,8 +24,6 @@ function HomePage() {
                 <div>
                     <Cards />
                 </div>
-
-
                 <div>
                     <div>
                         <div style={styles.Heading}>
