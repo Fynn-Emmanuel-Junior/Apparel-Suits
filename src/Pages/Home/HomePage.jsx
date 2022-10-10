@@ -1,5 +1,4 @@
 import React from 'react';
-import image  from '../../assets/bannerImg/banner.png';
 import image1 from '../../assets/bannerImg/banner1.jpg';
 import image7 from '../../assets/homePage/image7.jpg';
 import image8 from '../../assets/homePage/Wedding-Garden.jpg';
@@ -176,4 +175,3 @@ function HomePage() {
 }
 
 export default HomePage;
-

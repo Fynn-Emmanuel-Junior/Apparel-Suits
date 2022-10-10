@@ -6,26 +6,24 @@ import Counter from '../../Components/Counter';
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 import { BarLoader } from 'react-spinners';
+import { useParams } from 'react-router-dom';
 
 
-const SuitItem = ({productid,setProduct,setProducts,setQuantity,setSize}) => {
+const SuitItem = ({productid,setQuantity,setSize}) => {
+
+    const { id } = useParams();
+    console.log(id);
     
     const product = Products.filter((product) => product.id === productid);
     const [selected, setSelected] = useState("");
     const [loading,setLoading] = useState(false);
 
-    const handleClick = () => {
-        setProduct(product);
-        setProducts(product);
-        
-    }
-    
-    useEffect(() => {
-        
+
+    useEffect(() => { 
         setLoading(true);
         setTimeout(() => {
             setLoading(false)
-        },3000)
+        },2000)
     },[])
 
     
@@ -60,14 +58,11 @@ const SuitItem = ({productid,setProduct,setProducts,setQuantity,setSize}) => {
                                 <Dropdown selected={selected} setSelected={setSelected}  setQuantity={setQuantity} />
                                
                             </div>
-                            <div style={{margin: "10px 0"}}>
-                                {/* <Colors selected={selected} setSelected={setSelected} /> */}
-                            </div>
                             <div style={{marginBottom: "3%"}}>
                                 <Counter setSize={setSize} />
                             </div>
                             <div style={{width: "40%", marginBottom: "20px", position: "relative"}}>
-                             <Link to='/checkout' className='button' style={{textDecoration: "none"}} onClick={handleClick}>
+                             <Link to='/checkout' className='button' style={{textDecoration: "none"}}>
                                 ADD TO CART
                              </Link>   
                             </div>

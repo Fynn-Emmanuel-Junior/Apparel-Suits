@@ -1,12 +1,15 @@
 import React from 'react';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
+import Products from '../../Constants/SuitImages';
 
-const Checkout = ({product,products,size,quantity}) => {
+const Checkout = ({productid,size,quantity}) => {
+
+    const product = Products.find((product) => product.id === productid);
+    console.log(product)
+    console.log(typeof productid)
     
-    const allProducts = [];
-    const Products = allProducts.push(product);
-    console.log(Products);
+ 
 
     return (
         <>
@@ -30,12 +33,20 @@ const Checkout = ({product,products,size,quantity}) => {
                     </div>
                 </div>
             </div>
-            <div style={{width: "80%",margin: "auto"}}>
+            <div>
                 <div>
-                    {product[0].Image}
+                    <div>
+                        <img src={product.Image} alt={"Product"} />
+                    </div>
+                    <div>
+                        {quantity}
+                    </div>
+                    <div>
+                        
+                    </div>
                 </div>
-
             </div>
+            
             
            <Footer />
         </>

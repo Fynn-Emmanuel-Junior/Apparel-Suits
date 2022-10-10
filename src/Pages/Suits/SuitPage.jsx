@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {   useEffect,useState } from 'react';
 import Products from '../../Constants/SuitImages';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
@@ -6,18 +6,18 @@ import { Link } from  'react-router-dom';
 import { BarLoader } from 'react-spinners';
 
 
-const SuitPage = ({setProductid}) => {
+const SuitPage = ({setProductid,setProduct}) => {
 
+    // const [Products,setProducts] = useState([]);
     const [loading,setLoading] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
+        setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        },1000)
+        },1000);
+        
     },[])
-
-
     return (
         <div>
             <Header />
@@ -41,8 +41,9 @@ const SuitPage = ({setProductid}) => {
                     {
                         Products.map((product) => {
                             return (
-                                <Link to='/suitItem' style={Styles.link} key={product.id} onClick={() => {
-                                    setProductid(product.id)
+                                <Link to={`/suits/${product.id}`} style={Styles.link} key={product.id} onClick={() => {
+                                    setProductid(product.id);
+                                    setProduct(product);
                                    
                                 }}>
                                      <div>
@@ -50,13 +51,12 @@ const SuitPage = ({setProductid}) => {
                                         loading ? 
                                         <div style={{marginTop: "120%",marginLeft: "70%"}}>
                                             <BarLoader  />
-
                                         </div>
                                         : 
                                         
                                         <div style={{width: "100%", border: "0.5px solid #eeeeee", cursor: "pointer"}}>
                                             <div style={{width: "180px", margin: "auto"}}>
-                                                <img style={{width: "100%", height: "100%"}} key={product.id}  src={product.Image} alt=""/>
+                                                <img style={{width: "100%", height: "100%"}} key={product.id}  src={product.Image} alt={"product"}/>
                                             </div>
                                             <div>
                                                 <div style={{width: "80%", margin: "auto", textAlign: "center",fontSize: "12px"}}>

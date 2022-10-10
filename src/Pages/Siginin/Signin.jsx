@@ -42,7 +42,9 @@ function Signin() {
                                 />
                         </div>
                         <div style={{width: "50%", margin: "auto", marginBottom: "20px", position: "relative"}}>
+                               <Link to='/suits'>
                                 <button className='button'>LOG IN</button>
+                               </Link> 
                         </div>
                         <div style={{display: "flex", justifyContent: "center", alignItems: "center", width: "50%", margin: "auto" }}>
                                 <p style={{color: "#94969b", marginRight: "5px"}}>Don't have an account?</p>

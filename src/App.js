@@ -10,8 +10,7 @@ import { useState} from 'react'
 const  App = () => {
 
   const [productid,setProductid] = useState();
-  const [product,setProduct] = useState({});
-  const [products,setProducts] = useState({});
+  const [product,setProduct] = useState();
   const [size,setSize] = useState('');
   const [quantity,setQuantity] = useState('')
 
@@ -23,9 +22,9 @@ const  App = () => {
           <Route path='/' element={<HomePage  />}/>
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/suits' element={<SuitPage  setProductid={setProductid} />} />
-          <Route path='/suitItem' element={<SuitItem productid={productid} setProduct={setProduct} setSize={setSize} setQuantity={setQuantity} setProducts={setProducts} />} />
-          <Route path='/checkout' element={<Checkout product={product} products={products} size={size} quantity={quantity}/>}/>
+          <Route path='/suits' element={<SuitPage  setProductid={setProductid} setProduct={setProduct} />} />
+          <Route path='/suits/:id' element={<SuitItem productid={productid}  setSize={setSize} setQuantity={setQuantity} product={product}/>} />
+          <Route path='/checkout' element={<Checkout productid={productid} size={size} quantity={quantity}/>}/>
         </Routes>
       </div>
   )

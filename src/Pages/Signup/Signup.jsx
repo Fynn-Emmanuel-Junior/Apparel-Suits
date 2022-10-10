@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Header from '../../Components/Header';
+import { Link } from 'react-router-dom';
 
 function Signup() {
     return (
@@ -33,7 +34,9 @@ function Signup() {
                        </div>
 
                        <div style={{width: "50%", margin: "auto", marginBottom: "20px", position: "relative"}}>
-                            <button className='button'>CREATE MY ACCOUNT</button>
+                            <Link to='/suits'>
+                                <button className='button' onClick={(e) => e.preventDefault()}>CREATE MY ACCOUNT</button>
+                            </Link>
                        </div>
                     </form>
                 </div>
