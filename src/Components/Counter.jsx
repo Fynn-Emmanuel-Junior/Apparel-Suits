@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react'
 
-const Counter = ({setSize}) => {
+const Counter = ({setSize,setCount}) => {
 
     const [increment,setIncrement] = useState(1);
     
@@ -36,7 +36,7 @@ const Counter = ({setSize}) => {
     return (
         <div>
             <div style={{width: "50%"}}>
-                <div style={{display: "flex", justifyContent: "space-between", border: "1px solid #557571",width: "40%"}}>
+                <div style={{display: "flex", justifyContent: "space-between",width: "40%"}}>
                     <div onClick={Substract} style={{fontSize: "25px", cursor: "pointer",marginLeft:"10px"}}>-</div>
                     <div  style={{fontSize: "25px"}}>{increment}</div>
                     <div onClick={Add}  style={{fontSize: "25px", cursor: "pointer",marginRight: "10px"}}>+</div>

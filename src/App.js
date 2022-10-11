@@ -12,7 +12,8 @@ const  App = () => {
   const [productid,setProductid] = useState();
   const [product,setProduct] = useState();
   const [size,setSize] = useState('');
-  const [quantity,setQuantity] = useState('')
+  const [quantity,setQuantity] = useState('');
+  const [count,setCount] = useState('');
 
   // const [productsum,setProductsum] = useState([]);
 
@@ -23,8 +24,8 @@ const  App = () => {
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/suits' element={<SuitPage  setProductid={setProductid} setProduct={setProduct} />} />
-          <Route path='/suits/:id' element={<SuitItem productid={productid}  setSize={setSize} setQuantity={setQuantity} product={product}/>} />
-          <Route path='/checkout' element={<Checkout productid={productid} size={size} quantity={quantity}/>}/>
+          <Route path='/suits/:id' element={<SuitItem productid={productid}setCount={setCount}  setSize={setSize} setQuantity={setQuantity} product={product}/>} />
+          <Route path='/checkout' element={<Checkout productid={productid} count={count} setSize={setSize} size={size} quantity={quantity}/>}/>
         </Routes>
       </div>
   )

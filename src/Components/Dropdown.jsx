@@ -24,7 +24,7 @@ const Dropdown = ({selected, setSelected,setQuantity}) => {
                 <div className='dropdown-content' >
                     {
                         Options.map((option) => (
-                            <div className='dropdown-item'   onClick={e =>{ 
+                            <div className='dropdown-item' key={option.id}  onClick={e =>{ 
                                 setSelected(option)
                                 setisActive(false)
                                 setQuantity(option);

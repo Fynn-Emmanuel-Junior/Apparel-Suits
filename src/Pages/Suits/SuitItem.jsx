@@ -9,7 +9,7 @@ import { BarLoader } from 'react-spinners';
 import { useParams } from 'react-router-dom';
 
 
-const SuitItem = ({productid,setQuantity,setSize}) => {
+const SuitItem = ({productid,setQuantity,setSize,setCount}) => {
 
     const { id } = useParams();
     console.log(id);
@@ -59,7 +59,9 @@ const SuitItem = ({productid,setQuantity,setSize}) => {
                                
                             </div>
                             <div style={{marginBottom: "3%"}}>
-                                <Counter setSize={setSize} />
+                                
+                                    <Counter setSize={setSize} setCount={setCount} />
+                               
                             </div>
                             <div style={{width: "40%", marginBottom: "20px", position: "relative"}}>
                              <Link to='/checkout' className='button' style={{textDecoration: "none"}}>
